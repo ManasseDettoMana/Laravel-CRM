@@ -17,7 +17,7 @@ class CreateAgenciesTable extends Migration
             $table->id();
             $table->string('nome');
             $table->text('logo');
-            $table->string('p_iva')->unique();
+            $table->string('p_iva');
             $table->timestamps();
         });
     }

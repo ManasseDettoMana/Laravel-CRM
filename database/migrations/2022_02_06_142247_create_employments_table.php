@@ -18,7 +18,7 @@ class CreateEmploymentsTable extends Migration
             $table->string('nome');
             $table->string('cognome');
             $table->string('azienda');
-            $table->unsignedSmallInteger('cell');
+            $table->unsignedInteger('cell');
             $table->string('mail')->unique();
             $table->timestamps();
         });
