@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\agency;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Agency;
 
 class AgencyController extends Controller
 {
@@ -14,7 +15,7 @@ class AgencyController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.agencies.index');
     }
 
     /**
@@ -44,7 +45,7 @@ class AgencyController extends Controller
      * @param  \App\agency  $agency
      * @return \Illuminate\Http\Response
      */
-    public function show(agency $agency)
+    public function show(Agency $agency)
     {
         //
     }
@@ -55,7 +56,7 @@ class AgencyController extends Controller
      * @param  \App\agency  $agency
      * @return \Illuminate\Http\Response
      */
-    public function edit(agency $agency)
+    public function edit(Agency $agency)
     {
         //
     }
@@ -67,7 +68,7 @@ class AgencyController extends Controller
      * @param  \App\agency  $agency
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, agency $agency)
+    public function update(Request $request, Agency $agency)
     {
         //
     }
@@ -78,7 +79,7 @@ class AgencyController extends Controller
      * @param  \App\agency  $agency
      * @return \Illuminate\Http\Response
      */
-    public function destroy(agency $agency)
+    public function destroy(Agency $agency)
     {
         //
     }

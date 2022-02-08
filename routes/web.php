@@ -27,6 +27,8 @@ Route::middleware('auth')
     ->group(function(){
 
         Route::get('/', 'HomeController@index')->name('home');
+        Route::resource('agencies', AgencyController::class);
+        Route::resource('employments', EmploymentController::class);
 });
 
 Route::get('{any?}', function(){

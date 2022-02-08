@@ -25,12 +25,12 @@ class EmploymentSeeder extends Seeder
             $id_singolo = Arr::random($ag_id);
 
             $newEmp->agency_id = $id_singolo;
-            $newEmp->azienda = $ag_nome[$id_singolo - 1];
-
+            $newEmp->azienda = $ag_nome[array_search($id_singolo, $ag_id)];
+            $newEmp->azienda = 
             $newEmp->nome = $faker->name();
             $newEmp->cognome = $faker->lastname();
 
-            $newEmp->cell = $faker->randomNumber(5, true);
+            $newEmp->cell = $faker->randomNumber(9, true);
             $newEmp->mail = $faker->safeEmail();
             
             $newEmp->save();

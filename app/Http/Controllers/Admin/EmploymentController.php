@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
-
-use App\Models\Employment;
+namespace App\Http\Controllers\Admin;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use App\Models\Employment;
 
 class EmploymentController extends Controller
 {
@@ -14,7 +15,10 @@ class EmploymentController extends Controller
      */
     public function index()
     {
-        //
+        // $emps = Employment::all();
+        $emps = DB::table('employments')->paginate(10);
+        return view('admin.employment.index', compact('emps'));
+        
     }
 
     /**
