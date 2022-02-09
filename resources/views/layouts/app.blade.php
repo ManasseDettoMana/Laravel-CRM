@@ -18,7 +18,6 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('scss/style.scss') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">

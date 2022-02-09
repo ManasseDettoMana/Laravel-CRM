@@ -15,7 +15,6 @@ class AddForeignKeyToEmployments extends Migration
     public function up()
     {
         Schema::table('employments', function (Blueprint $table) {
-            // $table->foreignId('agency_id')->constrained();
 
             $table->unsignedBigInteger('agency_id')->after('id')->nullable();
 
